@@ -87,14 +87,22 @@ docker-compose exec web python manage.py createsuperuser
 **Request Body:**
 ```json
 [
-  {
-    "student_id": "student123",
-    "events": [
-      {"unit": "1", "created_time": "2023-01-01T00:00:00Z"},
-      {"unit": "2", "created_time": "2023-01-02T00:00:00Z"}
-    ],
-    "namespace": "test"
-  }
+    {
+        "namespace": "ns_example",
+        "student_id": "00a9a76518624b02b0ed57263606fc26",
+        "events": [
+            {
+                "type": "saved_code",
+                "created_time": "2024-07-21 03:04:55.939000+00:00",
+                "unit": "17"
+            },
+            {
+                "type": "saved_code",
+                "created_time": "2024-07-21 03:05:27.027000+00:00",
+                "unit": "18"
+            }
+        ]
+    }
 ]
 ```
 
@@ -113,7 +121,7 @@ docker-compose exec web python manage.py createsuperuser
 ```json
 {
   "status": "completed",
-  "student_id": "student123",
+  "student_id": "00a9a76518624b02b0ed57263606fc26",
   "html": "<h2>Student ID: student123</h2><p>Event Order: Q1 -> Q2</p>"
 }
 ```
