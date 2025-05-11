@@ -49,6 +49,19 @@ This will start the following services:
 - Redis (port 6379)
 - Celery worker
 - Celery beat
+- Flower (Celery monitoring dashboard on port 5555)
+
+## Monitoring
+
+You can monitor the Celery tasks using the Flower dashboard at `http://localhost:5555`.
+
+![Flower Dashboard](screenshot/flower.png)
+
+The Flower dashboard provides:
+- Real-time monitoring of Celery workers and tasks
+- Task history and statistics
+- Worker status and resource usage
+- Ability to view task details and results
 - Flower (port 5555)
 
 ### 4. Apply Database Migrations
